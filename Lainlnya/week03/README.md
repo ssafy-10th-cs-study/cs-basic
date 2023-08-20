@@ -36,6 +36,8 @@
 
 보통 데이터베이스 연결모듈에 많이 사용
 
+[싱글턴 패턴을 만드는 7가지 방법](https://github.com/ssafy-10th-cs-study/cs-basic/blob/main/Lainlnya/week03/Singleton.md)
+
 ### ⭕️ 장점
 
 하나의 인스턴스를 기반으로 해당 **인스턴스를 다른 모듈들이 공유하여 사용** → **인스턴스 생성 시 비용 감소**
