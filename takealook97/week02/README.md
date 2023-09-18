@@ -104,7 +104,7 @@
 - 배포
     - 사용자를 위한 서비스 배포 뿐만 아니라 QA엔지니어나 관리자 페이지를 위한 배포, 데이터 웨어하우스로부터 데이터를 가공하여 백엔드를 위해 배포하는 행위 등을 포괄한다.
 
-### Continous Deployment
+### Continuous Deployment
 - 툴
     - 대표적으로 github action, genkins, circle ci가 있으며  heroku를 통해 CI/CD 설정 없이 자동 가능
     - heroku + github action 으로 설정도 가능.
