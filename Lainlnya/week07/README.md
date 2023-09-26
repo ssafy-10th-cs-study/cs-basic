@@ -2,7 +2,7 @@
 
 ✔️ HTTP의 특징
 
-- 상태 없음(statelsee)
+- 상태 없음(stateless)
 - HTTP 요청을 통해 데이터를 주고 받을 때 요청이 끝나면 요청한 사용자의 정보를 유지하지 않음
 
 ✔️ 세션: 서버와 클라이언트의 연결이 활성화된 상태를 의미
@@ -32,7 +32,7 @@
 
 ### JWT란?
 
-JWT는 Json Web Token을 의미
+JWT는 Json Web Token을 의미하며, 인증에 필요한 정보들을 암호화시킨 Token
 
 헤더, 페이로드, 서명으로 이루어져 있음
 
@@ -49,6 +49,21 @@ JSON 객체로 인코딩 되며 메세지 인증, 암호화에 사용
 ✔️ Signature
 
 (인코딩된 header + payload) + 비밀키를 기반으로 헤더에 명시된 알고리즘으로 다시 생성한 서명값
+
+![로그인순서](./assets/image.png)
+
+### ✨ 로그인 순서
+
+1. 사용자가 ID, PW를 통해 로그인
+2. 서버에서 회원 DB에서 값을 비교
+3. 로그인이 완료되었을 경우, Access Token과 Refresh Token을 모두 발급하고, DB에 Refresh Token을 저장해 둠
+4. 사용자는 Refresh Token을 안전한 저장소에 저장 후, Access Token을 헤더에 실어 요청을 보냄
+5. Access Token을 검증하여 이에 맞는 데이터를 보냄
+6. 시간이 지나 Access Token이 만료
+7. 이전과 동일하게 Access Token을 헤더에 실어 요청을 보내고, 서버는 Access Token이 만료됨을 확인하고 권한 없음을 신호로 보냄
+8. Refresh Token과 Access Token을 함께 서버로 보냄
+9. Access Token이 조작되지 않았는지 확인 후, Refresh Token과 사용자의 DB에 저장되어있던 Refresh Token을 비교한다. Refresh Token의 유효기간이 지나지 않았다면 새로운 Access Token을 발급한다.
+10. 서버는 새로운 Access Token을 헤더에 실어 다시 API 요청 응답을 진행한다.
 
 ### 장점
 
@@ -72,15 +87,24 @@ refresh토큰은 access토큰이 만료되었을 때 다시 access 토큰을 얻
 
 ![token](./assets/token.png)
 
-로그인을 할 때 access token과 refresh token 두 가지를 얻고,
+🟥 Access Token
 
-access token이 만료가 되거나 사용자가 새로고침을 할 때 refresh token을 기반으로 새로운 access token을 얻음
+Access Token은 인증을 위한 토큰
 
-access token은 인증을 위한 토큰
-
-탈취의 위험이 있기 때문에 만료기한을 짧게 가져가는데, 로그인 유지기간이 짧음
+탈취의 위험이 있기 때문에 만료기한을 짧게 가져가기 때문에 로그인 유지기간이 짧음
 
 ⇒ refresh 토큰을 길게 해 계속 유지할 수 있게끔 만들어줌
+
+🟥 Refresh Token
+
+Refresh Token은 재발급을 위한 토큰
+
+Access Token과 똑같은 형태의 JWT이다. \
+Refresh Token은 긴 유효기간을 가지면서, Access Token이 만료되었을 때 새로 발급해주는 열쇠가 됨
+
+사용자는 Refresh Token을 안전한 저장소에 저장 후, Access Token을 헤더에 실어 요청을 보냄
+
+Refresh Token은 서버에 저장되기 때문에 Refresh Token이 해커에 의해 탈취당했다고 판단되었을 때 Refresh Token을 삭제함으로써 강제 로그아웃 할 수 있음
 
 ✔️ 주의할 점
 
