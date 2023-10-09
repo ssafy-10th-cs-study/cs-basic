@@ -428,7 +428,7 @@
     - Content-Language
     - Content-Type
     - application/x-www-form-urlencoded
-    - - multipart/form-data
-    - - text/plain
+    - multipart/form-data
+    - text/plain
     - Range (참고로 fireforx 브라우저는 해당 헤더를 허용하지 않는다.)
 - 이와 같은 메서드 타입, 헤더를 가진 요청을 간단한 요청(simple request)이자 안전한 요청이라고 한다.
