@@ -55,7 +55,7 @@
 - 보통 장치의 NIC에 할당된다.
 - 48비트로 이루어져있으며 24비트의 OUI와 24비트의 UAA로 이루어져있다.
 
-  ![image](https://github.com/takealook97/cs-basic/assets/118447769/d37aaa6e-1ef8-45be-a95b-d3f79d70251f)  
+  ![img_0.png](./assets/img_0.png)  
 
     - OUI : IEEE에서 할당한 제조사 코드
     - UAA : 제조사에서 구별되는 코드
@@ -78,7 +78,7 @@
 - ARP를 통해 논리적 주소인 IP 주소를 물리적 주소인 MAC 주소로 변환
 - RARP(Reverse~)를 통해 물리적 주소인 MAC 주소를 논리적 주소인 IP 주소로 변환하기도 한다.
 
-  ![image](https://github.com/takealook97/cs-basic/assets/118447769/cb397c93-0191-481a-a322-742f78186c0a)  
+  ![img_1.png](./assets/img_1.png)    
 
 - ARP의 과정
     1. 해당 IP주소에 맞는 MAC주소를 찾기 위해 해당 데이터를 ‘브로드캐스팅’을 통해 연결된 모든 네트워크에 있는 장치한테 모두 보낸다.
@@ -90,7 +90,7 @@
 
 ### IPv4
 
-![image](https://github.com/takealook97/cs-basic/assets/118447769/e27f7c9d-768a-4bc5-a5b4-b96c0312c43e)  
+![img_2.png](./assets/img_2.png)    
 
 - 32비트 → 2^32개의 주소(41억 9천만) 표현 가능
 - 8비트 단위(옥텟)로 점을 직어 4개로 구분하며 8비트를 10진수로 표현
@@ -98,7 +98,7 @@
 
 ### IPv6
 
-![image](https://github.com/takealook97/cs-basic/assets/118447769/c36ae8d2-9970-4e5f-a4b5-6b855d672728)  
+![img_3.png](./assets/img_3.png)    
 
 - 128비트 → 2^128개의 주소 표현 가능
   - 많은 주소 처리가 가능하기에 NAT, 서브네팅이 필요 X
@@ -106,7 +106,7 @@
   - 16비트는 16진수로 변환되어 콜론(:)으로 구분하여 표시
   - 앞의 연속되는 0은 생략가능
 
-![image](https://github.com/takealook97/cs-basic/assets/118447769/73390b72-d21d-4f96-bde6-973fa67780d2)  
+![img_4.png](./assets/img_4.png)    
 
 - 앞의 64비트는 네트워크 주소, 뒤 64비트는 인터페이스 주소
 - IPSec이 내장되어 있다.
@@ -145,13 +145,13 @@
 - 정의
   - 네트워크 주소를 매기고 그에 따라 네트워크의 크기를 다르게 구분하여 클래스를 할당하는 주소 체계
 
-    ![image](https://github.com/takealook97/cs-basic/assets/118447769/ea5b0a88-e598-4175-81b0-586647a52f6b)  
+    ![img_5.png](./assets/img_5.png)  
 
     - 구분하는 기준자(1, 2, 3 옥텟)을 서브넷마스크라고 함
 
 ### 클래스 A
 
-![image](https://github.com/takealook97/cs-basic/assets/118447769/62a4cd2a-a61d-426f-bcc4-9a68551c57c6)  
+![img_6.png](./assets/img_6.png)  
 
 - 2^24 – 2 = 한 네트워크당 16,777,214 호스트 ID(약 1600만개) / 0
 - 네트워크 주소 범위 : 1 ~ 126 로 시작
@@ -160,14 +160,14 @@
 
 ### 클래스B
 
-![image](https://github.com/takealook97/cs-basic/assets/118447769/689baecd-796f-4e3e-8bd3-7d348eca9ba2)  
+![img_7.png](./assets/img_7.png)      
 
 - 1. 2^16–2 = 한 네트워크 당 65534 호스트 ID(6만5천개) / 10
 - 네트워크 주소 범위 : 128 ~ 191로 시작
 
 ### 클래스C
 
-![image](https://github.com/takealook97/cs-basic/assets/118447769/402e1822-e8ea-4159-a263-958e6aa10513)  
+![img_8.png](./assets/img_8.png)  
 
 - 2^8–2= 한 네트워크 당 254 호스트 ID / 110
 - 네트워크 주소 범위 : 192 ~ 223로 시작
