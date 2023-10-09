@@ -9,7 +9,7 @@
 
 ## 세션 기반 로그인
 
-![image](https://github.com/ssafy-10th-cs-study/cs-basic/assets/118447769/a034690c-ee0b-4d1b-88af-f72e74912553)  
+![img_0.png](./assets/img_0.png)  
 
 
 - 세션 아이디는 DB에 저장될 수도 있고, 웹 서버에 저장될 수도 있다.
@@ -34,7 +34,7 @@
 - JSON WEB Token을 의미하며 헤더, 페이로드, 서명으로 이루어져 있다.
 - JSON 객체로 인코딩되며 메세지 인증, 암호화에 사용된다.
 
-  ![image](https://github.com/ssafy-10th-cs-study/cs-basic/assets/118447769/4ee8492f-835d-4164-9ced-cd817a010787)  
+  ![img_1.png](./assets/img_1.png)  
 
 - Header
     - 토큰 유형과 서명알고리즘, base64URI로 인코딩된다.
@@ -58,9 +58,9 @@
 - 이를 통해 access토큰이 만료됐을 때 마다 인증에 관한 비용이 줄어들게 된다.
 - 로그인을 하게 되면 access 토큰과 refresh 토큰 두 개를 얻는다.
 
-![image](https://github.com/ssafy-10th-cs-study/cs-basic/assets/118447769/d97fde46-ff80-4166-8bbd-0a2359e9858c)  
+![img_2.png](./assets/img_3.png)  
 
-![image](https://github.com/ssafy-10th-cs-study/cs-basic/assets/118447769/f5c1899d-9819-4a04-9562-d469963bdfa8)  
+![img_3.png](./assets/img_3.png)  
 
 ---
 
@@ -138,7 +138,7 @@
 
 ### 레이어 별 프로토콜, PDU 정리
 
-![image](https://github.com/ssafy-10th-cs-study/cs-basic/assets/118447769/06af88f0-921f-4ca7-8c7e-7fb578adb133)  
+![img_4.png](./assets/img_4.png)  
 
 ### 레이어 별 담당 네트워크 장치
 
@@ -154,7 +154,7 @@
 - IP, Port 뿐만 아니라 url, 헤더, 쿠키 등을 기반으로 트래픽을 분산한다.
 - 헬스 체크를 통해 장애가 발생한 서버를 확인하고 해당 서버로 트래픽을 보내지 못하게 하는 역할을 한다.
 
-![image](https://github.com/ssafy-10th-cs-study/cs-basic/assets/118447769/9f8c3044-029c-4cc1-ba08-c20d52688feb)  
+![img_5.png](./assets/img_5.png)  
 
 - 헬스 체크
   - L4 스위치 또는 L7 스위치 모두 헬스 체크를 통해 정상적인 서버 또는 비정상적인 서버를 판별
@@ -168,11 +168,11 @@
 - 또한 전송 계층의 TCP, UDP 등의 헤더를 기반으로 우선순위를 판단해서 분산이 가능하다.
 - L7와 똑같이 헬스체크가 가능하다. 
 
-![image](https://github.com/ssafy-10th-cs-study/cs-basic/assets/118447769/95409606-eccd-47d2-b5ee-0f6ebb7f1053)  
+![img_6.png](./assets/img_6.png)  
 
 ## 인터넷 계층 : 라우터
 
-![image](https://github.com/ssafy-10th-cs-study/cs-basic/assets/118447769/84db3f84-da10-4cdf-9cbe-b191039828ae)  
+![img_7.png](./assets/img_7.png)  
 
 - 라우팅은 하나 이상의 네트워크에서 경로를 선택하는 프로세스
 - 이 라우팅을 하는 장비를 의미
