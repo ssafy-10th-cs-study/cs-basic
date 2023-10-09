@@ -23,7 +23,7 @@
 
 - 요청한 URL, 요청 메서드, 해당 자원을 요청할 때 해당 자원의 출처를 나타내는 URL을 노출시킬지 말지를 정하는 보안 정도가 설정되어있는 Referrer Policy 등이 들어간다.
 
-![image](https://github.com/ssafy-10th-cs-study/cs-basic/assets/118447769/359951d4-3cbc-487a-bfd5-45aa9f28a34a)
+![img_0.png](./assets/img_0.png)  
 
 ### 요청 헤더
 
@@ -66,7 +66,7 @@
 - 매번 데이터를 요청할 때마다 TCP 연결을 하는게 아닌 한 번 연결해놓고 계속해서 데이터를 받을 수 있게 만들었다.
 - 이는 keep-alive 옵션을 기본옵션으로 하면서 가능해졌다.
 
-  ![image](https://github.com/ssafy-10th-cs-study/cs-basic/assets/118447769/761eb837-1c11-493b-a7d3-8732a2d1bafa)  
+  ![img_1.png](./assets/img_1.png)    
 
 
 ### 2. 호스트 헤더
@@ -91,7 +91,7 @@
 
 - 수 많은 이미지를 하나의 이미지로 만들어 하나의 이미지만 다운받아놓고 이를 통해 수 많은 이미지를 다운받는 듯한 효과를 내는 것
 
-  ![image](https://github.com/ssafy-10th-cs-study/cs-basic/assets/118447769/e81584f3-c81b-4fd4-b16e-ad81202cbae8)  
+  ![img_2.png](./assets/img_2.png)  
 
 
 ### 코드 압축
@@ -118,7 +118,7 @@
 - 애플리케이션 계층과 전송 계층 사이에 바이너리 포맷 계층을 추가한다.
 - HTTP 1.0은 일반 텍스트 메세지를 전송하고 줄바꿈으로 데이터를 나눴다면 HTTP 2.0은 0과 1로 이루어진 바이너리 데이터로 변경되었고 더 작은 메세지가 프레임으로 캡슐화 되어서 전송된다.
 
-  ![image](https://github.com/ssafy-10th-cs-study/cs-basic/assets/118447769/87c6b440-839a-450b-8739-73147032ed5d)  
+  ![img_3.png](./assets/img_3.png)  
 
 
 ### 멀티플렉싱
@@ -128,9 +128,9 @@
 - 이를 HTTP/2.0에서는 리소스를 작은 프레임으로 나누고 이를 스트림으로 프레임을 전달한다.
 - 각가의 프레임은 스트림ID, 해당 chunk의 크기를 나타내는 프레임이 추가되었기때문에 작게 나눠서 다운로드가 되더라도 결과적으로 응답데이터에서는 올바른 순서로 재조립할 수 있게 된다.
 
-    ![image](https://github.com/ssafy-10th-cs-study/cs-basic/assets/118447769/385d2ffe-c0b5-4624-9e61-c19cfe576c6e)  
+  ![img_4.png](./assets/img_4.png)  
 
-    ![image](https://github.com/ssafy-10th-cs-study/cs-basic/assets/118447769/ef1171c4-1b32-4179-b51a-b1f0a6a1032e)  
+  ![img_5.png](./assets/img_5.png)  
 
 
 ### 서버 푸시
@@ -159,7 +159,7 @@
 - HTTP/2나 HTTP/3 는 HTTPS 위에서 돌아가는데 TLS로 암호와통신을 구축할 때의 핸드셰이크를 활용한다.
 - 이를 기반으로 1 - RTT만에 연결을 성립할 수 있다.
 
-  ![image](https://github.com/ssafy-10th-cs-study/cs-basic/assets/118447769/fd90becf-2f7f-4c9c-8b8d-dccab7281309)  
+  ![img_6.png](./assets/img_6.png)  
 
 - 전송된 패킷이 손실 되었다면 수신측에서 에러를 검출하고 수정하는 방식이며 열악한 네트워크 환경에서도 낮은 패킷 손실률을 자랑하는 순방향 오류 수정 메커니즘(FEC)이라는 특징을 가진다.
 
@@ -173,7 +173,7 @@
 - 이를 복호화하려면 송신자와 수신자가 서로 동의한 “키”가 필요하다.
 - 이를 만들기 위해 키가 쓰이기도 한다.
 
-![image](https://github.com/ssafy-10th-cs-study/cs-basic/assets/118447769/dcedfb2d-0919-4b92-a131-1e1b88732fc6)  
+![img_7.png](./assets/img_7.png)  
 
 - plaintext + key = ciphertext
 - ciphertext = plaintext + key
@@ -227,9 +227,9 @@
 
 ### 로컬 스토리지와 오리진
 
-![image](https://github.com/ssafy-10th-cs-study/cs-basic/assets/118447769/ba213c81-c6b9-4b6a-b73d-a5b3229a1a4c)  
+![img_8.png](./assets/img_8.png)  
 
-![image](https://github.com/ssafy-10th-cs-study/cs-basic/assets/118447769/d53a2fb9-fc9f-437b-affc-92078d563cb9)  
+![img_9.png](./assets/img_9.png)  
 
 ---
 
@@ -259,7 +259,7 @@
 - 서버에서 응답 헤더로 Set-Cookie로 설정해서 쿠키를 보내면 그 때 부터 클라이언트에서 요청헤더 Cookie에 설정되어 자동으로 서버에 전달되게 되고 브라우저에도 저장되게 된다.
     - HTTP 헤더를 통해 클라이언트 또는 서버가 HTTP 요청 또는 응답 할 때 추가 정보를 전달할 수 있다.
 
-![image](https://github.com/ssafy-10th-cs-study/cs-basic/assets/118447769/9e36dd58-4cb6-4362-9a53-6387a331f0ce)  
+![img_10.png](./assets/img_10.png)  
 
 - 쿠키는 클라이언트와 서버 둘 다 조작이 가능하지만 보통 서버에서 만료기한 등을 설정 및 컨트롤 한다.
 - 저장 용량은 최대 4KB까지 가능하다.
