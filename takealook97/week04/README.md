@@ -45,7 +45,7 @@
 - 대역폭(bandwidth) : 주어진 시간 동안 네트워크 연결을 통해 흐를 수 있는 최대 비트 수(최대 트래픽)
 - 대략적인 최대 동시 접속자수 유추의 척도가 된다.
 
-![image](https://github.com/takealook97/cs-basic/assets/118447769/3121e4a7-8892-4223-89bb-ad0461484589)
+![img_0.png](./assets/img_0.png)  
 
 ### 지연시간
 
@@ -71,7 +71,7 @@
 
 ### 병목 현상
 
-![image](https://github.com/takealook97/cs-basic/assets/118447769/c06102a6-97c7-4602-8357-52811ad4698a)
+![img_1.png](./assets/img_1.png)    
 
 - 병목(bottleneck) 현상은 트래픽에 의해 데이터 흐름이 제한되는 상황을 의미한다.
     - 전체 시스템의 성능이나 용량이 하나의 구성 요소로 인해 제한받는 현상
@@ -79,7 +79,7 @@
 
 ### 버스 토폴로지
 
-![image](https://github.com/takealook97/cs-basic/assets/118447769/75e36fbe-45b6-4093-840f-330bff57abb6)
+![img_2.png](./assets/img_2.png)  
 
 - 특징
     - 하나의 회선에 여러 개의 노드
@@ -94,7 +94,7 @@
 
 ### 스타 토폴로지
 
-![image](https://github.com/takealook97/cs-basic/assets/118447769/b417f852-c0c4-4f27-a93e-6a0b2981dc45)
+![img_3.png](./assets/img_3.png)  
 
 - 특징
     - 중앙에 있는 노드를 기반으로 연결된 형태
@@ -109,8 +109,8 @@
 
 ### 트리 토폴로지
 
-![image](https://github.com/takealook97/cs-basic/assets/118447769/c4c11b01-aa36-4789-91f7-4eea56df7f04)
-![image](https://github.com/takealook97/cs-basic/assets/118447769/fb2bdc4a-f6ee-4a92-9a30-a39a2c5972d1)
+![img_4.png](./assets/img_4.png)  
+![img_5.png](./assets/img_5.png)  
 
 - 특징
     - 트리 형태(계층적 토폴로지)
@@ -125,7 +125,7 @@
 
 ### 링 형 토폴로지
 
-![image](https://github.com/takealook97/cs-basic/assets/118447769/133d4b17-f4c7-4bf9-bb80-e0f6f48686fd)
+![img_6.png](./assets/img_6.png)  
 
 - 특징
     - 고리 형태
@@ -139,7 +139,7 @@
 
 ### 메시 토폴로지
 
-![image](https://github.com/takealook97/cs-basic/assets/118447769/9723e8a8-f735-4758-b77c-3de8b3040d0a)
+![img_7.png](./assets/img_7.png)  
 
 - 특징
     - 그물망 형태
@@ -159,7 +159,7 @@
 
 ### 유니캐스트
 
-![image](https://github.com/takealook97/cs-basic/assets/118447769/a574160a-392e-4b6a-843c-25b6243bb1b0)
+![img_8.png](./assets/img_8.png)  
 
 - 1 : 1 통신
 - 대표적으로 HTTP 통신이 있다.
@@ -167,14 +167,14 @@
 
 ### 멀티 캐스트
 
-![image](https://github.com/takealook97/cs-basic/assets/118447769/e073a06d-fcbb-40f3-92a9-3790983d709d)
+![img_9.png](./assets/img_9.png)  
 
 - 1 : N 통신
 - N이지만 모든 노드들에게 데이터를 전달하지는 않고 특정 그룹에게만 데이터를 전달한다.
 
 ### 브로드 캐스트
 
-![image](https://github.com/takealook97/cs-basic/assets/118447769/b2774f50-5c50-4824-8c56-db8321b475e1)
+![img_10.png](./assets/img_10.png)  
 
 - 1 : N 통신
 - 그룹이 아닌 연결되어있는 모든 노드에게 데이터를 전달한다.
@@ -219,7 +219,7 @@
 
 ### 계층 구조
 
-![image](https://github.com/takealook97/cs-basic/assets/118447769/940dfe3e-73b8-4a1a-86ac-5b3d47666318)
+![img_11.png](./assets/img_11.png)    
 
 - 애플리케이션 계층 (application)
     - HTTP, SMTP, SSH, FTP가 대표적이다.
@@ -265,7 +265,7 @@
 
 ### <U>OSI 7 계층과 TCP/IP 4계층의 차이</U>
 
-![image](https://github.com/takealook97/cs-basic/assets/118447769/1d816c82-a81e-47d9-8709-5d60e3ea3d48)
+![img_12.png](./assets/img_12.png)  
 
 - TCP/IP 계층과 달리 OSI 계층은 애플리케이션 계층을 세 개로 쪼개고 링크 계층을 데이터 링크 계층, 물리 계층으로 나눠서 표현한다.
 - 인터넷 계층을 네트워크 계층으로 부른다.
@@ -381,7 +381,7 @@
 
 # 3웨이 핸드셰이크
 
-![image](https://github.com/takealook97/cs-basic/assets/118447769/7d1b1da2-24ed-454e-8794-f95d6542ec13)
+![img_13.png](./assets/img_13.png)    
 
 1. SYN 단계 (synchronization 연결 요청 플래그)
 
@@ -407,7 +407,7 @@
     - 클라이언트는 closed, syn-sent, established가 된다.
     - 서버는 closed, listen, syn_received, established 상태가 된다.
 
-![image](https://github.com/takealook97/cs-basic/assets/118447769/330c1d0e-3e08-408c-a38f-67f5e33d430e)
+![img_14.png](./assets/img_14.png)  
 
 - 이러한 서버와 클라이언트 간의 연결 설정 과정이 있기 때문에 “TCP는 신뢰성이 있다”라고 한다.
     - 이러한 과정이 없는 UDP는 신뢰성이 없다.
@@ -416,7 +416,7 @@
 
 # 4웨이 핸드셰이크와 TIME_WAIT
 
-![image](https://github.com/takealook97/cs-basic/assets/118447769/59e2fd7d-ef7d-4aae-8f18-c54ae526caaa)
+![img_15.png](./assets/img_15.png)  
 
 1. 먼저 클라이언트가 연결을 닫으려고 할 때 FIN으로 설정된 세그먼트를 보낸다. 그리고 클라이언트는 `FIN_WAIT_1` 상태로 들어가고 서버의 응답을 기다린다.
 2. 서버는 클라이언트로 ACK라는 승인 세그먼트를 보내고 `CLOSE_WAIT` 상태에 들어간다. 클라이언트가 세그먼트를 받으면 `FIN_WAIT_2` 상태에 들어간다.
