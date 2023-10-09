@@ -222,7 +222,7 @@ public class Singleton {
 
 - L1, L2, L3, L4 → 메모리 위의 CPU 캐시 메모리
 
-  ![image](https://github.com/takealook97/cs-basic/assets/118447769/d1417cf0-3c8e-4027-8332-b770cf813e94)  
+  ![img_0.png](./assets/img_0.png)  
 
 - 자바에서는 멀티쓰레드 환경에서 Task를 수행하는 동안 성능 향상을 위해 메인 메모리에서 읽은 변수 값을 CPU 캐시에 저장하게 된다.
 - 이렇게 되면 쓰레드가 변수값을 읽어올 때 변수를 메인 메모리(RAM)으로부터 가져오는 것이 아니라 각각의 CPU 캐시에서 가져오게 된다. → <U>변수 값 불일치 문제 발생</U>
@@ -325,14 +325,14 @@ public class Singleton {
 
 - 메인 모듈이 ‘직접’ 다른 하위 모듈에 대한 의존성을 주기보다는 중간에 의존성 주입자 (dependency injector)가 이 부분을 가로채 메인 모듈이 ‘간접’적으로 의존성을 주입하는 방식
 
-  ![image](https://github.com/ssafy-10th-cs-study/cs-basic/assets/118447769/1a12cee2-1692-4069-bc48-4e83625a3b4c)  
+  ![img_1.png](./assets/img_1.png)  
 
 
 ### “A가 B에 의존한다”의 의미
 
 - B가 변하면 A에 영향을 미치는 관계 = A → B
 
-  ![image](https://github.com/ssafy-10th-cs-study/cs-basic/assets/118447769/f6c8536d-81dd-4ccc-91b8-bf9d6590d463)    
+  ![img_2.png](./assets/img_2.png)  
 
     ```java
     class BackendDeveloper {
@@ -376,7 +376,7 @@ public class Singleton {
     - 상위모듈은 하위모듈에 의존해서는 안된다.
     - 둘 다 추상화에 의존해야한다. 추상화는 세부사항에 의존해서는 안 된다. 세부 사항은 추상화에 따라 달라져야한다.
 
-  ![image](https://github.com/ssafy-10th-cs-study/cs-basic/assets/118447769/6713a39f-a685-484d-b920-83f2a83d28a8)    
+  ![img_3.png](./assets/img_3.png)  
 
     ```java
     import java.util.*;
@@ -477,7 +477,7 @@ public class Singleton {
 - 객체가 어떤 대상 객체에 접근하기 전, 그 접근에 대한 흐름을 가로채서 해당 접근을 필터링하거나 수정하는 등의 역할을 하는 계층이 있는 디자인 패턴
 - ex) 서버 앞단에 두어 캐싱, 로깅 등에 활용하는 프록시서버
 
-  ![image](https://github.com/ssafy-10th-cs-study/cs-basic/assets/118447769/d59245c6-0f5b-49f6-b85e-6137e2a0a1c7)  
+  ![img_4.png](./assets/img_4.png)  
 
 ---
 
@@ -486,7 +486,7 @@ public class Singleton {
 - 모델(Model), 뷰(View), 컨트롤러(Controller)로 이루어진 디자인 패턴
 - 이를 반영한 대표적인 프레임워크로 Spring WEB MVC가 있다.
 
-    ![image](https://github.com/ssafy-10th-cs-study/cs-basic/assets/118447769/335a0be4-84c3-49f3-89e5-f8bd47388562)  
+  ![img_5.png](./assets/img_5.png)  
 
 ### Model
 
@@ -518,7 +518,7 @@ public class Singleton {
 - Controller가 Presenter로 교체된 패턴
 - V와 P는 1:1 관계이므로 MVC보다 더 강한 결합을 지닌 디자인 패턴이다.  
 
-    ![image](https://github.com/ssafy-10th-cs-study/cs-basic/assets/118447769/3b840319-df48-4c31-bf9d-1a7136a011d9)  
+  ![img_6.png](./assets/img_6.png)  
 
 
 # MVVM 패턴
@@ -527,7 +527,7 @@ public class Singleton {
 - VM은 View를 추상화한 계층이며 VM : V = 1 : N 이라는 관계를 갖는다.
 - 이를 반영한 대표적인 프레임워크로 Vue.js가 있다.
 
-    ![image](https://github.com/ssafy-10th-cs-study/cs-basic/assets/118447769/7259ae03-b3f3-4fa8-8b03-044af55fa354)  
+  ![img_7.png](./assets/img_7.png)  
 
 - VM은 커멘드와 데이터 바인딩을 가진다.
     - 커맨드 : 여러 요소에 대한 처리를 하나의 액션으로 처리할 수 있는 기법
@@ -546,7 +546,7 @@ public class Singleton {
 
 ### Dispatcher Survlet의 요청처리 과정
 
-![image](https://github.com/ssafy-10th-cs-study/cs-basic/assets/118447769/06902357-7e2d-44f9-b109-5fceb1a0d540)  
+![img_8.png](./assets/img_8.png)  
 
 1. 클라이언트 요청 시 가장 먼저 Dispatcher Servlet이 이를 받는다. (프론트 컨트롤러의 역할) 이 때 url이나 form data 등 여러 개의 데이터 등을 기반으로 어떤 컨트롤러에게 이를 처리하게 할지 결정하는 역할을 한다. 보통 클래스 이름, url, xml의 설정 등을 참고 할 수 있지만 보통 `@RequestMapping` 을 참고해서 한다.
 2. 하나 이상의 handler mapping을 참고해서 적절한 컨트롤러를 설정한다. 이후 컨트롤러로 요청을 보낸다.
@@ -568,7 +568,7 @@ public class Singleton {
 - 장점
     - <U>단방향이기에 데이터 일관성이 증가 → 테스팅이 쉬워짐 → 버그를 찾기 쉬워진다.</U>
 
-  ![image](https://github.com/ssafy-10th-cs-study/cs-basic/assets/118447769/882239e7-19f4-4216-91d9-c8935a432b32)  
+  ![img_9.png](./assets/img_9.png)  
 
 - Action
     - 사용자의 이벤트를 담당한다. 마우스 클릭이나, 글을 쓴다던가 등을 의미하며 해당 이벤트에 관한 객체를 만들어내 dispatcher에게 전달한다.
