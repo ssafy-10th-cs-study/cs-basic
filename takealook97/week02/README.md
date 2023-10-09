@@ -46,7 +46,7 @@
 - 컨테이너는 OS를 공유하기 때문에 빠르고, 경량화되어있으며 격리성도 훌륭하다.
 - 단점 : OS에 문제가 생기면 다른 앱에도 영향을 미칠 수 있다.
 
-    ![image](https://github.com/ssafy-10th-cs-study/cs-basic/assets/118447769/a46c48f7-c5d6-4798-ad1e-6b23ad134bbf)
+  ![img_0.png](./assets/img_0.png)  
 
 
 ### 도커
@@ -74,7 +74,7 @@
 
 - 코드 구축부터 시작해서 배포까지의 일련의 과정으로, 총 3가지 단계로 구성됨
 
-![image](https://github.com/ssafy-10th-cs-study/cs-basic/assets/118447769/8f62d2f4-4e10-4940-a3fa-f83370257e7c)
+![img_1.png](./assets/img_1.png)  
 
 - 1 단계 : Continuous Integration
     - 코드를 빌드하고, 테스트하고, 합치는 과정
